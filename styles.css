@@ -1,4 +1,7 @@
-/* Flack to the Future Presentation Styles */
+/* Flack to the Future Presentation Styles - Revamped */
+
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap');
 
 /* Base styles for the presentation */
 html, body {
@@ -8,6 +11,7 @@ html, body {
   background-color: #000;
   margin: 0;
   padding: 0;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .reveal {
@@ -98,21 +102,69 @@ html, body {
   100% { background-position: 0% 50%; }
 }
 
+/* Enhanced neon text effect */
+.neon-text {
+  color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 15px #0073e6,
+    0 0 20px #0073e6,
+    0 0 25px #0073e6,
+    0 0 30px #0073e6,
+    0 0 35px #0073e6;
+  animation: neon-pulse 1.5s infinite alternate;
+}
+
+@keyframes neon-pulse {
+  from {
+    text-shadow:
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 15px #0073e6,
+      0 0 20px #0073e6,
+      0 0 25px #0073e6,
+      0 0 30px #0073e6,
+      0 0 35px #0073e6;
+  }
+  to {
+    text-shadow:
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 15px #0073e6,
+      0 0 20px #0073e6,
+      0 0 25px #0073e6,
+      0 0 35px #0073e6,
+      0 0 45px #0073e6;
+  }
+}
+
+/* Global font settings */
+.reveal p, .reveal li, .reveal div {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
+  line-height: 1.6;
+}
+
 /* Heading styles */
 .reveal h1 {
+  font-family: 'Orbitron', sans-serif;
   font-size: 3.8em;
+  font-weight: 900;
   text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
   margin-bottom: 30px;
-  animation: glow 3s infinite;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   line-height: 1.2;
   max-width: 90%;
   margin-left: auto;
   margin-right: auto;
+  text-transform: uppercase;
 }
 
 .reveal h2 {
+  font-family: 'Orbitron', sans-serif;
   font-size: 2.8em;
+  font-weight: 700;
   padding-bottom: 10px;
   display: inline-block;
   margin-bottom: 30px;
@@ -120,6 +172,7 @@ html, body {
   z-index: 1;
   line-height: 1.3;
   border: none;
+  letter-spacing: 2px;
 }
 
 .reveal h2::after {
@@ -128,7 +181,7 @@ html, body {
   bottom: -2px;
   left: 0;
   width: 100%;
-  height: 2px;
+  height: 3px;
   background: linear-gradient(90deg, #42affa, #f1c40f, #e74c3c, #42affa);
   background-size: 200% 100%;
   animation: rainbow 2s linear infinite;
@@ -136,8 +189,11 @@ html, body {
 }
 
 .reveal h3 {
+  font-family: 'Orbitron', sans-serif;
   font-size: 1.8em;
   color: #f1c40f;
+  letter-spacing: 1px;
+  font-weight: 500;
 }
 
 /* List styling */
@@ -152,23 +208,26 @@ html, body {
 .reveal li {
   margin-bottom: 15px;
   font-size: 1.2em;
-  padding: 5px 10px;
+  padding: 8px 15px;
   border-left: 3px solid #42affa;
   background: rgba(66, 175, 250, 0.1);
   transition: all 0.3s ease;
+  border-radius: 0 5px 5px 0;
 }
 
 .reveal li:hover {
   background: rgba(66, 175, 250, 0.2);
   transform: translateX(5px);
+  box-shadow: 0 0 15px rgba(66, 175, 250, 0.3);
 }
 
 /* Image effects */
 .reveal img {
   border: 3px solid white;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   max-height: 60vh;
+  border-radius: 5px;
 }
 
 .reveal img:hover {
@@ -178,9 +237,17 @@ html, body {
 }
 
 .reveal .pixel-text {
-  font-size: 0.9em;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1em;
   line-height: 1.6;
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+  letter-spacing: 1px;
+}
+
+.reveal .retro-text {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.3em;
+  letter-spacing: 1px;
 }
 
 /* Button styling */
@@ -199,6 +266,9 @@ html, body {
   overflow: hidden;
   font-size: 1.1em;
   text-transform: uppercase;
+  font-family: 'Orbitron', sans-serif;
+  border: none;
+  cursor: pointer;
 }
 
 .custom-button::after {
@@ -241,6 +311,7 @@ html, body {
   margin-top: 20px;
   border-left: 3px solid #f1c40f;
   font-style: italic;
+  font-family: 'Orbitron', sans-serif;
 }
 
 /* Retro-futuristic elements */
@@ -251,6 +322,44 @@ html, body {
   box-shadow: 0 0 20px rgba(241, 196, 15, 0.5);
   margin: 20px auto;
   max-width: 80%;
+  border-radius: 5px;
+}
+
+/* Campaign logo styling */
+.campaign-logo {
+  font-size: 2.1em;
+  color: #f1c40f;
+  text-shadow: 0 0 15px rgba(241, 196, 15, 0.7);
+  margin-bottom: 20px;
+  transform: perspective(500px) rotateX(15deg);
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+/* Retro future text effect */
+.retro-future {
+  background: linear-gradient(45deg, #ff00cc, #3333ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+}
+
+/* Crown icon animation */
+.crown-icon {
+  display: inline-block;
+  font-size: 0.8em;
+  vertical-align: top;
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
 }
 
 /* Responsive design adjustments */
@@ -353,14 +462,27 @@ html, body {
   padding: 5px 10px;
   border-radius: 5px;
   animation: shine 2s infinite;
+  position: relative;
+  overflow: hidden;
 }
 
-@keyframes shine {
+.short-king-highlight::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: shine-move 2s infinite;
+}
+
+@keyframes shine-move {
   0% {
-    background-position: -200% 0;
+    left: -100%;
   }
   100% {
-    background-position: 200% 0;
+    left: 100%;
   }
 }
 
@@ -375,10 +497,13 @@ html, body {
   width: 80%;
   background: rgba(0, 0, 0, 0.5);
   border-left: 4px solid #f1c40f;
-  padding: 15px;
+  padding: 20px;
   margin: 20px auto;
   font-style: italic;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  border-radius: 0 5px 5px 0;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
 }
 
 /* Fullscreen video background */
@@ -406,10 +531,12 @@ html, body {
 /* Content overlay for video backgrounds */
 .content-overlay {
   background: rgba(0, 0, 0, 0.7);
-  padding: 20px;
+  padding: 25px;
   border-radius: 10px;
   max-width: 80%;
   margin: 0 auto;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(66, 175, 250, 0.3);
 }
 
 /* Fade-in text animation */
@@ -421,4 +548,75 @@ html, body {
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+/* Confetti animation enhancement */
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  opacity: 0.8;
+  animation: confetti-fall 5s linear infinite;
+  border-radius: 2px;
+}
+
+@keyframes confetti-fall {
+  0% { 
+    transform: translateY(-100px) rotate(0deg); 
+    opacity: 1; 
+  }
+  100% { 
+    transform: translateY(600px) rotate(360deg); 
+    opacity: 0; 
+  }
+}
+
+/* Height comparison styling */
+.height-comparison {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.height-marker {
+  position: absolute;
+  width: 100%;
+  border-top: 2px dashed #f1c40f;
+  color: #f1c40f;
+  font-weight: bold;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Enhanced slide transitions */
+.reveal .slides section {
+  transition: transform 0.8s cubic-bezier(0.26, 0.86, 0.44, 0.985), 
+              opacity 0.8s cubic-bezier(0.26, 0.86, 0.44, 0.985), 
+              background-color 0.8s cubic-bezier(0.26, 0.86, 0.44, 0.985);
+}
+
+/* Cyberpunk-inspired grid background */
+.grid-background {
+  background-image: linear-gradient(rgba(66, 175, 250, 0.1) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(66, 175, 250, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: center center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  transform: perspective(500px) rotateX(60deg);
+  transform-origin: center bottom;
+  animation: grid-move 20s linear infinite;
+}
+
+@keyframes grid-move {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 20px;
+  }
 }
