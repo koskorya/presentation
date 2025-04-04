@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malcolm Flack - Policies & Stances | San Diego County</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Press+Start+2P&family=VT323&family=Inter:wght@300;400;500;700&display=swap');
+    
+    :root {
+      --primary-color: #42affa;
+      --accent-color: #f1c40f;
+      --dark-bg: #1a1a2e;
+      --card-bg: #16213e;
+      --light-text: #ffffff;
+      --muted-text: #a0a0a0;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--dark-bg);
+      color: var(--light-text);
+      padding-top: 80px;
+      line-height: 1.6;
+      font-weight: 300;
+    }
+    
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.9);
+      box-shadow: 0 2px 15px rgba(66, 175, 250, 0.5);
+      padding: 15px 0;
+      backdrop-filter: blur(10px);
+    }
+    
+    .navbar-brand {
+      font-family: 'Orbitron', sans-serif;
+      color: var(--accent-color) !important;
+      text-shadow: 0 0 10px rgba(241, 196, 15, 0.7);
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    
+    .nav-link {
+      color: var(--primary-color) !important;
+      margin: 0 15px;
+      transition: all 0.3s ease;
+      font-weight: 500;
+      position: relative;
+    }
+    
+    .nav-link:hover {
+      color: var(--accent-color) !important;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: var(--accent-color);
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    header {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      padding: 80px 0;
+      margin-bottom: 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, transparent 20%, var(--dark-bg) 150%);
+      opacity: 0.8;
+    }
+    
+    header .container {
+      position: relative;
+      z-index: 1;
+    }
+    
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 15px rgba(66, 175, 250, 0.7);
+      letter-spacing: 2px;
+    }
+    
+    h2 {
+      font-family: 'Orbitron', sans-serif;
+      color: var(--primary-color);
+      padding-bottom: 10px;
+      margin-bottom: 25px;
+      display: inline-block;
+      position: relative;
+      letter-spacing: 1px;
+    }
+    
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    }
+    
+    .policy-card {
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 30px;
+      transition: all 0.4s ease;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      height: 100%;
+      border: 1px solid rgba(66, 175, 250, 0.1);
+    }
+    
+    .policy-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(66, 175, 250, 0.3);
+      border-color: rgba(66, 175, 250, 0.3);
+    }
+    
+    .policy-card h3 {
+      color: var(--accent-color);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+    
+    .policy-icon {
+      font-size: 2.8rem;
+      color: var(--primary-color);
+      margin-bottom: 25px;
+      transition: all 0.4s ease;
+      filter: drop-shadow(0 0 8px rgba(66, 175, 250, 0.5));
+    }
+    
+    .policy-card:hover .policy-icon {
+      color: var(--accent-color);
+      transform: scale(1.2) rotate(5deg);
+    }
+    
+    .policy-card p {
+      color: var(--light-text);
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+    
+    .policy-card ul {
+      padding-left: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .policy-card li {
+      margin-bottom: 0.8rem;
+      position: relative;
+      list-style-type: none;
+      padding-left: 1.5rem;
+    }
+    
+    .policy-card li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--primary-color);
+      font-weight: bold;
+    }
+    
+    .btn-back {
+      background: linear-gradient(to right, #e74c3c, #c0392b);
+      color: white;
+      border: none;
+      padding: 15px 35px;
+      border-radius: 50px;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      transition: all 0.4s;
+      margin-top: 30px;
+      box-shadow: 0 8px 20px rgba(231, 76, 60, 0.5);
+      position: relative;
+      overflow: hidden;
+      text-transform: uppercase;
+      font-size: 1.1rem;
+    }
+    
+    .btn-back:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(231, 76, 60, 0.7);
+      color: white;
+      background: linear-gradient(to right, #c0392b, #e74c3c);
+    }
+    
+    .btn-back::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transition: 0.5s;
+    }
+    
+    .btn-back:hover::after {
+      left: 100%;
+    }
+    
+    footer {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 50px 0;
+      margin-top: 80px;
+      position: relative;
+    }
+    
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, var(--primary-color), var(--accent-color), var(--primary-color));
+    }
+    
+    .social-icons a {
+      color: var(--primary-color);
+      font-size: 1.8rem;
+      margin: 0 15px;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+    
+    .social-icons a:hover {
+      color: var(--accent-color);
+      transform: translateY(-5px) scale(1.2);
+    }
+    
+    .neon-text {
+      color: #fff;
+      text-shadow:
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 15px #0073e6,
+        0 0 20px #0073e6,
+        0 0 25px #0073e6,
+        0 0 30px #0073e6,
+        0 0 35px #0073e6;
+    }
+    
+    .crown-icon {
+      display: inline-block;
+      font-size: 0.8em;
+      vertical-align: top;
+      animation: float 2s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    .lead {
+      font-size: 1.3rem;
+      font-weight: 300;
+      max-width: 800px;
+      margin: 0 auto 30px;
+      color: var(--light-text);
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+      h1 {
+        font-size: 3rem;
+      }
+      
+      .policy-card {
+        padding: 25px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      
+      h2 {
+        font-size: 1.8rem;
+      }
+      
+      .policy-card h3 {
+        font-size: 1.5rem;
+      }
+      
+      .btn-back {
+        padding: 12px 25px;
+        font-size: 1rem;
+      }
+      
+      header {
+        padding: 60px 0;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .policy-icon {
+        font-size: 2.2rem;
+      }
+      
+      .policy-card {
+        padding: 20px;
+      }
+      
+      .social-icons a {
+        margin: 0 10px;
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">FLACK TO THE FUTURE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="policies.html">Policies</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1 class="neon-text">MALCOLM FLACK <span class="crown-icon">👑</span></h1>
+      <p class="lead">Policies & Political Stances for San Diego County</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2>VISION FOR SAN DIEGO COUNTY</h2>
+      <p class="lead">Powered by vision, fueled by Short King Energy</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Public Safety Policy -->
+      <div class="col-lg-6 mb-4">
+        <div class="policy-card">
+          <div class="text-center">
+            <i class="fa fa-shield-alt policy-icon"></i>
+            <h3>Public Safety Reform</h3>
+          </div>
+          <p>Drawing from his experience as a former police officer, Malcolm is committed to implementing community-oriented policing strategies that build trust between law enforcement and residents. His approach includes:</p>
+          <ul>
+            <li>Increasing transparency in police operations</li>
+            <li>Expanding mental health response teams</li>
+            <li>Investing in de-escalation training</li>
+            <li>Creating civilian oversight committees with real authority</li>
+          </ul>
+          <p>Malcolm believes in a balanced approach that maintains public safety while ensuring accountability and respect for all community members.</p>
+        </div>
+      </div>
+
+      <!-- Environmental Policy -->
+      <div class="col-lg-6 mb-4">
+        <div class="policy-card">
+          <div class="text-center">
+            <i class="fa fa-leaf policy-icon"></i>
+            <h3>Environmental Protection</h3>
+          </div>
+          <p>After witnessing firsthand the effects of toxic algae blooms on La Jolla's wildlife, Malcolm has made environmental protection a cornerstone of his platform:</p>
+          <ul>
+            <li>Implementing stricter regulations on industrial runoff</li>
+            <li>Expanding protected coastal areas</li>
+            <li>Investing in green infrastructure projects</li>
+            <li>Creating a rapid response team for environmental emergencies</li>
+            <li>Supporting research into harmful algae bloom prevention</li>
+          </ul>
+          <p>Malcolm is committed to preserving San Diego's natural beauty for future generations.</p>
+        </div>
+      </div>
+
+      <!-- Housing Policy -->
+      <div class="col-lg-6 mb-4">
+        <div class="policy-card">
+          <div class="text-center">
+            <i class="fa fa-home policy-icon"></i>
+            <h3>Affordable Housing</h3>
+          </div>
+          <p>Malcolm understands that housing affordability is one of the most pressing issues facing San Diego County residents:</p>
+          <ul>
+            <li>Streamlining the permit process for affordable housing developments</li>
+            <li>Implementing inclusionary zoning requirements</li>
+            <li>Creating a county land trust for affordable housing</li>
+            <li>Expanding rental assistance programs</li>
+            <li>Supporting first-time homebuyer initiatives</li>
+          </ul>
+          <p>His goal is to ensure that San Diego remains accessible to people of all income levels.</p>
+        </div>
+      </div>
+
+      <!-- Economic Development -->
+      <div class="col-lg-6 mb-4">
+        <div class="policy-card">
+          <div class="text-center">
+            <i class="fa fa-chart-line policy-icon"></i>
+            <h3>Economic Development</h3>
+          </div>
+          <p>Malcolm believes in fostering a diverse and resilient local economy:</p>
+          <ul>
+            <li>Supporting small business development through grants and technical assistance</li>
+            <li>Attracting clean technology and sustainable industries</li>
+            <li>Investing in workforce development programs</li>
+            <li>Creating innovation hubs in underserved communities</li>
+            <li>Partnering with educational institutions to create job pipelines</li>
+          </ul>
+          <p>His economic vision focuses on creating opportunities for all San Diego County residents while promoting sustainable growth.</p>
+        </div>
+      </div>
+
+      <!-- Transportation -->
+      <div class="col-lg-6 mb-4">
+        <div class="policy-card">
+          <div class="text-center">
+            <i class="fa fa-bus policy-icon"></i>
+            <h3>Transportation & Infrastructure</h3>
+          </div>
+          <p>Malcolm is committed to modernizing San Diego County's transportation systems:</p>
+          <ul>
+            <li>Expanding public transit options to reduce traffic congestion</li>
+            <li>Investing in road and bridge maintenance</li>
+            <li>Creating more bike lanes and pedestrian-friendly streets</li>
+            <li>Supporting electric vehicle infrastructure</li>
+            <li>Implementing smart city technologies to improve traffic flow</li>
+          </ul>
+          <p>His infrastructure plan aims to make San Diego more connected, accessible, and environmentally friendly.</p>
+        </div>
+      </div>
+
+      <!-- Community Engagement -->
+      <div class="col-lg-6 mb-4">
+        <div class="policy-card">
+          <div class="text-center">
+            <i class="fa fa-users policy-icon"></i>
+            <h3>Community Engagement</h3>
+          </div>
+          <p>Malcolm believes that government works best when citizens are actively involved:</p>
+          <ul>
+            <li>Creating neighborhood councils with direct input to county decisions</li>
+            <li>Implementing participatory budgeting processes</li>
+            <li>Hosting regular town halls throughout the county</li>
+            <li>Developing a mobile app for citizen feedback and service requests</li>
+            <li>Supporting community-led initiatives and projects</li>
+          </ul>
+          <p>His approach to governance centers on transparency, accessibility, and meaningful public participation.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5 mb-5">
+      <a href="index.html" class="btn btn-back">
+        <i class="fa fa-arrow-left me-2"></i> Back to Presentation
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start">
+          <p>Paid for by Friends of the Short King.</p>
+          <p>&copy; 2028 Malcolm Flack Campaign</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

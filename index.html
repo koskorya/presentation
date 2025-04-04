@@ -36,7 +36,9 @@
     }
     
     .reveal section {
-      height: 100%;
+      height: auto;
+      min-height: 80%;
+      padding-bottom: 40px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -133,6 +135,31 @@
       0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
       100% { transform: translateY(600px) rotate(360deg); opacity: 0; }
     }
+    
+    /* Responsive adjustments */
+    @media (max-height: 700px) {
+      .reveal h1 {
+        font-size: 2.5em;
+        margin-bottom: 15px;
+      }
+      
+      .reveal h2 {
+        font-size: 2em;
+        margin-bottom: 15px;
+      }
+      
+      .reveal img {
+        max-height: 250px;
+      }
+      
+      .height-comparison {
+        height: 200px;
+      }
+      
+      .reveal section {
+        padding-bottom: 20px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -154,7 +181,7 @@
         </div>
         <h2 class="animate__animated animate__fadeIn">Malcolm at Bayside Landing</h2>
         <div class="animate__animated animate__fadeIn animate__delay-1s" style="position: relative;">
-          <img src="https://images.unsplash.com/photo-1543807535-eceef0bc6599?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Representative image of Malcolm holding a beer" style="border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.5);">
+          <img src="https://images.unsplash.com/photo-1543807535-eceef0bc6599?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Representative image of Malcolm holding a beer" style="border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.5); max-height: 300px;">
           <div class="animate__animated animate__fadeIn animate__delay-2s" style="position: absolute; bottom: 20px; right: 20px; background: rgba(0,0,0,0.7); padding: 10px; border-radius: 5px;">
             <p style="margin: 0; font-style: italic; color: #f1c40f;">
               "Where legends are born... and drinks are poured."
@@ -165,28 +192,22 @@
 
       <!-- Slide 3: Malcolm and Michael back to back -->
       <section data-background-color="#2c3e50" data-transition="slide">
-        <h2>The Legend Begins</h2>
-        <div class="height-comparison animate__animated animate__fadeIn">
-          <div class="height-marker" style="top: 50px; left: 0;">
-            <span style="position: absolute; left: 10px;">Michael - 6'2"</span>
-          </div>
-          <div class="height-marker" style="top: 150px; left: 0;">
-            <span style="position: absolute; left: 10px;">Malcolm - 5'8"</span>
-          </div>
-          <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Grainy photo of two men standing back to back" style="border: 5px solid white; box-shadow: 0 0 20px rgba(0,0,0,0.5); position: absolute; left: 50%; transform: translateX(-50%); top: 20px;">
+        <h2 style="font-size: 2em; margin-bottom: 15px;">The Legend Begins</h2>
+        <div class="height-comparison animate__animated animate__fadeIn" style="position: relative; height: auto; margin-bottom: 20px;">
+          <img src="images/michael_taller_malcolm.PNG" alt="Michael and Malcolm standing back to back" style="border: 5px solid white; box-shadow: 0 0 20px rgba(0,0,0,0.5); position: relative; display: block; margin: 0 auto; max-height: 250px;">
         </div>
         <p class="animate__animated animate__fadeIn animate__delay-1s retro-text">
           "It was at Bayside Landing, after a night of volleyball at AVA.<br>
           Not all things are invented—some are discovered."
         </p>
-        <p class="animate__animated animate__fadeIn animate__delay-2s pixel-text" style="color: #f1c40f; font-weight: bold; font-size: 1.2em;">
+        <p class="animate__animated animate__fadeIn animate__delay-2s pixel-text" style="color: #f1c40f; font-weight: bold; font-size: 1em;">
           Malcolm Flack… had the face of a short guy.
         </p>
       </section>
 
       <!-- Slide 4: Zoom on Malcolm's face with crown -->
       <section data-background-color="#000000" data-transition="zoom">
-        <div style="position: relative; overflow: hidden; height: 400px; width: 400px; margin: 0 auto;">
+        <div style="position: relative; overflow: hidden; height: 300px; width: 300px; margin: 0 auto;">
           <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Malcolm's face" class="animate__animated animate__zoomIn" style="width: 100%; height: 100%; object-fit: cover;">
           <img src="https://images.unsplash.com/photo-1590272456521-1bbe160a18ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Crown" class="animate__animated animate__fadeIn animate__delay-2s seal-animation" style="position: absolute; top: -30px; left: 50%; transform: translateX(-50%); width: 150px; filter: drop-shadow(0 0 10px gold);">
         </div>
@@ -203,9 +224,9 @@
       <section data-background-color="#1a3c5e" data-transition="slide">
         <h2 class="animate__animated animate__fadeInDown">San Diego Police Academy</h2>
         <div class="animate__animated animate__fadeIn animate__delay-1s" style="display: flex; justify-content: space-around; flex-wrap: wrap; margin: 20px 0; position: relative;">
-          <img src="https://images.unsplash.com/photo-1617347454431-f49d7ff5c3b1?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Police training" style="margin: 10px; border: 3px solid white; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
-          <img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Police helping tourist" style="margin: 10px; border: 3px solid white; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
-          <img src="https://images.unsplash.com/photo-1608346128025-1896b97a6fa8?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Traffic direction" style="margin: 10px; border: 3px solid white; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+          <img src="images/malcolm_as_cop.PNG" alt="Malcolm as a cop" style="margin: 10px; border: 3px solid white; box-shadow: 0 0 10px rgba(0,0,0,0.5); max-height: 150px;">
+          <img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Police helping tourist" style="margin: 10px; border: 3px solid white; box-shadow: 0 0 10px rgba(0,0,0,0.5); max-height: 150px;">
+          <img src="https://images.unsplash.com/photo-1608346128025-1896b97a6fa8?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Traffic direction" style="margin: 10px; border: 3px solid white; box-shadow: 0 0 10px rgba(0,0,0,0.5); max-height: 150px;">
           <div class="animate__animated animate__fadeIn animate__delay-3s" style="position: absolute; top: -15px; right: -15px; background: #e74c3c; color: white; border-radius: 50%; width: 80px; height: 80px; display: flex; justify-content: center; align-items: center; transform: rotate(15deg); font-weight: bold; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
             <span style="font-size: 0.9em;">MOST<br>FLIRTY</span>
           </div>
@@ -240,7 +261,7 @@
       <!-- Slide 7: Restroom Incident -->
       <section data-background-color="#2c3e50" data-transition="zoom">
         <h2 class="animate__animated animate__fadeInDown neon-text">The Restroom Standoff</h2>
-        <div class="animate__animated animate__fadeIn animate__delay-1s" style="position: relative; width: 500px; height: 350px; margin: 20px auto; border: 5px solid white; box-shadow: 0 0 20px rgba(0,0,0,0.5); overflow: hidden;">
+        <div class="animate__animated animate__fadeIn animate__delay-1s" style="position: relative; width: 400px; height: 280px; margin: 20px auto; border: 5px solid white; box-shadow: 0 0 20px rgba(0,0,0,0.5); overflow: hidden;">
           <img src="https://images.unsplash.com/photo-1584556812952-905ffd0c611a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Seal" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 60%;" class="seal-animation">
           <div style="position: absolute; top: 0; left: 0; width: 100%; height: 40%; background: #34495e; display: flex; justify-content: center; align-items: center;">
             <div style="width: 80px; height: 80px; border-radius: 50%; overflow: hidden; border: 3px solid white; position: relative;">
@@ -275,7 +296,7 @@
       <section data-background-image="https://images.unsplash.com/photo-1523292562811-8fa7962a78c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" data-background-opacity="0.2" data-transition="slide">
         <h2 class="animate__animated animate__fadeInDown neon-text">The Next Step</h2>
         <div class="animate__animated animate__fadeIn animate__delay-1s" style="position: relative;">
-          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Malcolm in a suit" style="border: 5px solid white; box-shadow: 0 0 20px rgba(0,0,0,0.5);">
+          <img src="images/malcolm_as_politician.PNG" alt="Malcolm as a politician" style="border: 5px solid white; box-shadow: 0 0 20px rgba(0,0,0,0.5); max-height: 250px;">
           <div class="animate__animated animate__fadeIn animate__delay-2s" style="position: absolute; top: -20px; right: -20px; background: #f1c40f; color: #2c3e50; padding: 10px; border-radius: 50%; width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; transform: rotate(15deg); font-weight: bold; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
             <span style="font-size: 0.9em;">VOTE<br>NOW</span>
           </div>
@@ -293,7 +314,7 @@
           <span class="retro-future">FLACK TO THE FUTURE</span>
         </div>
         <div class="animate__animated animate__fadeIn animate__delay-1s" style="position: relative; margin: 20px 0;">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Malcolm giving thumbs up" style="border: 5px solid white; box-shadow: 0 0 20px rgba(0,0,0,0.5);">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Malcolm giving thumbs up" style="border: 5px solid white; box-shadow: 0 0 20px rgba(0,0,0,0.5); max-height: 250px;">
           <img src="https://images.unsplash.com/photo-1584556812952-905ffd0c611a?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80" alt="Seal with sunglasses" class="seal-animation" style="position: absolute; bottom: -20px; right: -20px; border: 3px solid white; border-radius: 50%; box-shadow: 0 0 15px rgba(0,0,0,0.7);">
           
           <!-- Add some confetti elements -->
@@ -325,17 +346,22 @@
             <span style="font-size: 3em; color: #f1c40f; text-shadow: 0 0 10px rgba(241, 196, 15, 0.7);">👑</span>
           </div>
           
-          <h2 class="fade-in-text neon-text animate__animated animate__fadeIn" style="margin-bottom: 40px;">
+          <h2 class="fade-in-text neon-text animate__animated animate__fadeIn" style="margin-bottom: 30px;">
             REMEMBER THE SHORT KING
           </h2>
           
-          <p class="fade-in-text animate__animated animate__fadeIn animate__delay-1s" style="font-family: 'Arial', sans-serif; letter-spacing: 1px; margin-bottom: 20px;">
+          <p class="fade-in-text animate__animated animate__fadeIn animate__delay-1s" style="font-family: 'Arial', sans-serif; letter-spacing: 1px; margin-bottom: 15px;">
             Paid for by Friends of the Short King.
           </p>
           
-          <div class="fade-in-text animate__animated animate__fadeIn animate__delay-2s" style="font-family: 'VT323', monospace; color: #3498db; font-size: 1.5em;">
-            Vote Malcolm Flack 2025
+          <div class="fade-in-text animate__animated animate__fadeIn animate__delay-2s" style="font-family: 'VT323', monospace; color: #3498db; font-size: 1.5em; margin-bottom: 25px;">
+            Vote Malcolm Flack 2028
           </div>
+          
+          <a href="policies.html" class="custom-button animate__animated animate__fadeIn animate__delay-3s" style="text-decoration: none; display: inline-block; margin-top: 15px;">
+            <i class="fa fa-file-text" style="margin-right: 10px;"></i>
+            View Malcolm's Policies
+          </a>
         </div>
       </section>
     </div>
@@ -351,19 +377,24 @@
       controls: true,
       progress: true,
       center: true,
-      width: '100%',
-      height: '100%',
-      margin: 0,
+      // Use percentage-based dimensions for better responsiveness
+      width: '80%',
+      height: '80%',
+      // Increase margins to ensure content fits
+      margin: 0.2,
+      // Adjust scaling limits for better fit
       minScale: 0.2,
-      maxScale: 2.0,
+      maxScale: 1.0,
       transition: 'slide',
       plugins: [ RevealZoom, RevealNotes, RevealHighlight ],
       slideNumber: true,
       autoPlayMedia: true,
       backgroundTransition: 'fade',
       viewDistance: 3,
-      display: 'flex',
-      navigationMode: 'default',
+      // Enable responsive mode
+      responsive: true,
+      // Ensure content fits within slides
+      disableLayout: false,
       // Press 's' to show speaker notes
       keyboard: {
         83: function() {
