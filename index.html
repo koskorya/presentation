@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flack to the Future: The Short King Rises</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/theme/black.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Press+Start+2P&family=VT323&display=swap');
+    
+    .reveal h1, .reveal h2 {
+      font-family: 'Orbitron', sans-serif;
+      text-transform: none;
+      text-shadow: 0 0 10px rgba(66, 175, 250, 0.7);
+      letter-spacing: 2px;
+    }
+    
+    .pixel-text {
+      font-family: 'Press Start 2P', cursive;
+      line-height: 1.5;
+    }
+    
+    .retro-text {
+      font-family: 'VT323', monospace;
+      font-size: 1.3em;
+    }
+    
+    .reveal .slides {
+      width: 100%;
+      height: 100%;
+    }
+    
+    .reveal section {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .fade-in-text {
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    .presenter-notes {
+      display: none;
+    }
+    
+    .seal-comparison {
+      position: relative;
+      width: 100%;
+      height: 300px;
+    }
+    
+    .campaign-logo {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.8em;
+      color: #f1c40f;
+      text-shadow: 0 0 15px rgba(241, 196, 15, 0.7);
+      margin-bottom: 20px;
+      transform: perspective(500px) rotateX(15deg);
+    }
+    
+    .retro-future {
+      background: linear-gradient(45deg, #ff00cc, #3333ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+    
+    .neon-text {
+      color: #fff;
+      text-shadow:
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 15px #0073e6,
+        0 0 20px #0073e6,
+        0 0 25px #0073e6,
+        0 0 30px #0073e6,
+        0 0 35px #0073e6;
+    }
+    
+    .crown-icon {
+      display: inline-block;
+      font-size: 0.8em;
+      vertical-align: top;
+      animation: float 2s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    .height-comparison {
+      position: relative;
+      height: 300px;
+      width: 100%;
+      margin: 20px auto;
+    }
+    
+    .height-marker {
+      position: absolute;
+      width: 100%;
+      border-top: 2px dashed #f1c40f;
+      color: #f1c40f;
+      font-weight: bold;
+    }
+    
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #f1c40f;
+      opacity: 0.8;
+      animation: confetti-fall 5s linear infinite;
+    }
+    
+    @keyframes confetti-fall {
+      0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(600px) rotate(360deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- Slide 1: Black screen with white text -->
+      <section data-background-color="#000000" data-transition="fade">
+        <h1 class="fade-in-text neon-text">The Future is Now.</h1>
+        <p class="fade-in-text animate__animated animate__fadeIn animate__delay-2s retro-text" style="margin-top: 30px; color: #f1c40f;">
+          A Short King's Tale
+        </p>
+      </section>
+
+      <!-- Slide 2: Malcolm at Bayside Landing -->
+      <section data-background-image="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" data-background-opacity="0.6" data-transition="fade">
+        <div class="presenter-notes">
+          Ladies and gentlemen, friends, voters, and believers in greatness of all sizes—
+          Let me take you back to where it all began.
+        </div>
+        <h2 class="animate__animated animate__fadeIn">Malcolm at Bayside Landing</h2>
+        <div class="animate__animated animate__fadeIn animate__delay-1s" style="position: relative;">
+          <img src="https://images.unsplash.com/photo-1543807535-eceef0bc6599?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Representative image of Malcolm holding a beer" style="border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.5);">
+          <div class="animate__animated animate__fadeIn animate__delay-2s" style="position: absolute; bottom: 20px; right: 20px; background: rgba(0,0,0,0.7); padding: 10px; border-radius: 5px;">
+            <p style="margin: 0; font-style: italic; color: #f1c40f;">
+              "Where legends are born... and drinks are poured."
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 3: Malcolm and Michael back to back -->
+      <section data-background-color="#2c3e50" data-transition="slide">
+        <h2>The Legend Begins</h2>
+        <div class="height-comparison animate__animated animate__fadeIn">
+          <div class="height-marker" style="top: 50px; left: 0;">
+            <span style="position: absolute; left: 10px;">Michael - 6'2"</span>
+          </div>
+          <div class="height-marker" style="top: 150px; left: 0;">
+            <span style="position: absolute; left: 10px;">Malcolm - 5'8"</span>
+          </div>
+          <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Grainy photo of two men standing back to back" style="border: 5px solid white; box-shadow: 0 0 20px rgba(0,0,0,0.5); position: absolute; left: 50%; transform: translateX(-50%); top: 20px;">
+        </div>
+        <p class="animate__animated animate__fadeIn animate__delay-1s retro-text">
+          "It was at Bayside Landing, after a night of volleyball at AVA.<br>
+          Not all things are invented—some are discovered."
+        </p>
+        <p class="animate__animated animate__fadeIn animate__delay-2s pixel-text" style="color: #f1c40f; font-weight: bold; font-size: 1.2em;">
+          Malcolm Flack… had the face of a short guy.
+        </p>
+      </section>
+
+      <!-- Slide 4: Zoom on Malcolm's face with crown -->
+      <section data-background-color="#000000" data-transition="zoom">
+        <div style="position: relative; overflow: hidden; height: 400px; width: 400px; margin: 0 auto;">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Malcolm's face" class="animate__animated animate__zoomIn" style="width: 100%; height: 100%; object-fit: cover;">
+          <img src="https://images.unsplash.com/photo-1590272456521-1bbe160a18ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Crown" class="animate__animated animate__fadeIn animate__delay-2s seal-animation" style="position: absolute; top: -30px; left: 50%; transform: translateX(-50%); width: 150px; filter: drop-shadow(0 0 10px gold);">
+        </div>
+        <h2 class="animate__animated animate__fadeIn animate__delay-2s neon-text">
+          THE SHORT KING <span class="crown-icon">👑</span>
+        </h2>
+        <p class="animate__animated animate__fadeIn animate__delay-3s retro-text" style="font-style: italic; margin-top: 10px;">
+          "But this wasn't just a nickname.<br>
+          It was a calling."
+        </p>
+      </section>
+
+      <!-- Slide 5: Police Academy Montage -->
+      <section data-background-color="#1a3c5e" data-transition="slide">
+        <h2 class="animate__animated animate__fadeInDown">San Diego Police Academy</h2>
+        <div class="animate__animated animate__fadeIn animate__delay-1s" style="display: flex; justify-content: space-around; flex-wrap: wrap; margin: 20px 0; position: relative;">
+          <img src="https://images.unsplash.com/photo-1617347454431-f49d7ff5c3b1?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Police training" style="margin: 10px; border: 3px solid white; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+          <img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Police helping tourist" style="margin: 10px; border: 3px solid white; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+          <img src="https://images.unsplash.com/photo-1608346128025-1896b97a6fa8?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Traffic direction" style="margin: 10px; border: 3px solid white; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+          <div class="animate__animated animate__fadeIn animate__delay-3s" style="position: absolute; top: -15px; right: -15px; background: #e74c3c; color: white; border-radius: 50%; width: 80px; height: 80px; display: flex; justify-content: center; align-items: center; transform: rotate(15deg); font-weight: bold; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+            <span style="font-size: 0.9em;">MOST<br>FLIRTY</span>
+          </div>
+        </div>
+        <ul class="animate__animated animate__fadeIn animate__delay-2s" style="list-style-type: none; padding: 0;">
+          <li><i class="fa fa-check-circle" style="color: #2ecc71;"></i> Not the most disciplined cadet</li>
+          <li><i class="fa fa-check-circle" style="color: #2ecc71;"></i> Definitely the most charming</li>
+          <li><i class="fa fa-heart" style="color: #e74c3c;"></i> "Community outreach" with the fire department</li>
+          <li class="animate__animated animate__fadeIn animate__delay-3s"><i class="fa fa-trophy" style="color: #f1c40f;"></i> <span style="color: #f1c40f;">Achievement Unlocked:</span> Flirt with every girl in the academy</li>
+        </ul>
+      </section>
+
+      <!-- Slide 6: La Jolla Cove and Toxic Algae -->
+      <section data-background-image="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" data-background-opacity="0.3" data-transition="fade">
+        <h2 class="animate__animated animate__fadeInDown">The Moment That Changed Everything</h2>
+        <div class="animate__animated animate__fadeIn animate__delay-1s retro-future-box" style="background: rgba(0,0,0,0.7); padding: 20px; border-radius: 10px; margin: 20px 0; position: relative; overflow: hidden;">
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); animation: rainbow 2s linear infinite;"></div>
+          <h3 style="color: #e74c3c;">BREAKING NEWS</h3>
+          <p style="font-family: 'Arial', sans-serif; font-size: 1.5em; font-weight: bold;">
+            "Toxic Algae Bloom Draws Seals Inland"
+          </p>
+          <div class="animate__animated animate__fadeIn animate__delay-2s" style="position: absolute; top: 10px; right: 10px; background: #e74c3c; color: white; padding: 5px 10px; border-radius: 5px; font-size: 0.8em; transform: rotate(15deg);">LIVE</div>
+        </div>
+        <p class="animate__animated animate__fadeIn animate__delay-2s pixel-text">
+          Seals, confused and intoxicated, began wandering inland.
+        </p>
+        <div class="animate__animated animate__fadeIn animate__delay-3s" style="margin-top: 20px;">
+          <img src="https://images.unsplash.com/photo-1584556812952-905ffd0c611a?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80" alt="Confused seal" style="border-radius: 50%; border: 3px solid #f1c40f; animation: pulse 2s infinite;">
+        </div>
+      </section>
+
+      <!-- Slide 7: Restroom Incident -->
+      <section data-background-color="#2c3e50" data-transition="zoom">
+        <h2 class="animate__animated animate__fadeInDown neon-text">The Restroom Standoff</h2>
+        <div class="animate__animated animate__fadeIn animate__delay-1s" style="position: relative; width: 500px; height: 350px; margin: 20px auto; border: 5px solid white; box-shadow: 0 0 20px rgba(0,0,0,0.5); overflow: hidden;">
+          <img src="https://images.unsplash.com/photo-1584556812952-905ffd0c611a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Seal" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 60%;" class="seal-animation">
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 40%; background: #34495e; display: flex; justify-content: center; align-items: center;">
+            <div style="width: 80px; height: 80px; border-radius: 50%; overflow: hidden; border: 3px solid white; position: relative;">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Malcolm's face" style="width: 100%; height: 100%; object-fit: cover;">
+              <div class="animate__animated animate__fadeIn animate__delay-3s" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: flex; justify-content: center; align-items: center;">
+                <i class="fa fa-wifi" style="color: white; font-size: 1.5em;"></i>
+              </div>
+            </div>
+          </div>
+          <div class="animate__animated animate__fadeIn animate__delay-2s" style="position: absolute; top: 10px; right: 10px; background: #e74c3c; color: white; padding: 5px 10px; border-radius: 5px; font-size: 0.8em;">LIVE</div>
+          <div class="animate__animated animate__fadeIn animate__delay-3s" style="position: absolute; bottom: 10px; right: 10px; display: flex; flex-direction: column; align-items: flex-end;">
+            <div style="display: flex; align-items: center; margin-bottom: 5px;">
+              <span style="color: white; margin-right: 5px;">👍 15.2K</span>
+              <i class="fa fa-thumbs-up" style="color: #3498db;"></i>
+            </div>
+            <div style="display: flex; align-items: center;">
+              <span style="color: white; margin-right: 5px;">💬 3.4K</span>
+              <i class="fa fa-comment" style="color: #2ecc71;"></i>
+            </div>
+          </div>
+        </div>
+        <div class="animate__animated animate__fadeIn animate__delay-2s">
+          <p class="pixel-text" style="color: #f1c40f; font-size: 1.2em;">"No Door Too Small. No Seal Too Big."</p>
+          <div class="custom-button animate__animated animate__pulse animate__infinite">
+            <i class="fa fa-users" style="margin-right: 10px;"></i>
+            20,000 New Followers
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 8: Malcolm in a suit -->
+      <section data-background-image="https://images.unsplash.com/photo-1523292562811-8fa7962a78c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" data-background-opacity="0.2" data-transition="slide">
+        <h2 class="animate__animated animate__fadeInDown neon-text">The Next Step</h2>
+        <div class="animate__animated animate__fadeIn animate__delay-1s" style="position: relative;">
+          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Malcolm in a suit" style="border: 5px solid white; box-shadow: 0 0 20px rgba(0,0,0,0.5);">
+          <div class="animate__animated animate__fadeIn animate__delay-2s" style="position: absolute; top: -20px; right: -20px; background: #f1c40f; color: #2c3e50; padding: 10px; border-radius: 50%; width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; transform: rotate(15deg); font-weight: bold; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+            <span style="font-size: 0.9em;">VOTE<br>NOW</span>
+          </div>
+        </div>
+        <ul class="animate__animated animate__fadeIn animate__delay-2s" style="list-style-type: none; padding: 0; margin-top: 20px;">
+          <li class="animate__animated animate__fadeInLeft animate__delay-3s"><i class="fa fa-arrow-right" style="color: #3498db;"></i> From patrol car to policy</li>
+          <li class="animate__animated animate__fadeInLeft animate__delay-4s"><i class="fa fa-arrow-right" style="color: #3498db;"></i> From public restrooms to public office</li>
+          <li class="animate__animated animate__fadeInLeft animate__delay-5s"><i class="fa fa-arrow-right" style="color: #3498db;"></i> From viral livestream to County Councilmember</li>
+        </ul>
+      </section>
+
+      <!-- Slide 9: Campaign Logo -->
+      <section data-background-gradient="linear-gradient(to bottom, #3498db, #2c3e50)" data-transition="zoom">
+        <div class="campaign-logo animate__animated animate__fadeInDown animate__pulse">
+          <span class="retro-future">FLACK TO THE FUTURE</span>
+        </div>
+        <div class="animate__animated animate__fadeIn animate__delay-1s" style="position: relative; margin: 20px 0;">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Malcolm giving thumbs up" style="border: 5px solid white; box-shadow: 0 0 20px rgba(0,0,0,0.5);">
+          <img src="https://images.unsplash.com/photo-1584556812952-905ffd0c611a?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80" alt="Seal with sunglasses" class="seal-animation" style="position: absolute; bottom: -20px; right: -20px; border: 3px solid white; border-radius: 50%; box-shadow: 0 0 15px rgba(0,0,0,0.7);">
+          
+          <!-- Add some confetti elements -->
+          <div class="confetti" style="left: 10%; animation-delay: 0.5s; background-color: #e74c3c;"></div>
+          <div class="confetti" style="left: 20%; animation-delay: 1.5s; background-color: #f1c40f;"></div>
+          <div class="confetti" style="left: 30%; animation-delay: 0.7s; background-color: #2ecc71;"></div>
+          <div class="confetti" style="left: 40%; animation-delay: 2s; background-color: #3498db;"></div>
+          <div class="confetti" style="left: 60%; animation-delay: 1s; background-color: #9b59b6;"></div>
+          <div class="confetti" style="left: 70%; animation-delay: 1.3s; background-color: #e74c3c;"></div>
+          <div class="confetti" style="left: 80%; animation-delay: 0.2s; background-color: #f1c40f;"></div>
+          <div class="confetti" style="left: 90%; animation-delay: 1.7s; background-color: #2ecc71;"></div>
+        </div>
+        <div class="animate__animated animate__fadeIn animate__delay-2s">
+          <p class="pixel-text" style="font-style: italic; margin: 20px 0; color: #fff;">
+            "This isn't just a campaign.<br>
+            It's a movement."
+          </p>
+          <p class="neon-text" style="font-weight: bold; font-size: 1.3em;">
+            Powered by Vision, Fueled by <span class="animate__animated animate__pulse animate__infinite">Short King Energy</span>.
+          </p>
+        </div>
+      </section>
+
+      <!-- Slide 10: Paid for by Friends -->
+      <section data-background-color="#000000" data-transition="fade">
+        <div style="position: relative; height: 100%; width: 100%;">
+          <!-- Add crown silhouette at the top -->
+          <div style="position: absolute; top: 20px; left: 50%; transform: translateX(-50%);">
+            <span style="font-size: 3em; color: #f1c40f; text-shadow: 0 0 10px rgba(241, 196, 15, 0.7);">👑</span>
+          </div>
+          
+          <h2 class="fade-in-text neon-text animate__animated animate__fadeIn" style="margin-bottom: 40px;">
+            REMEMBER THE SHORT KING
+          </h2>
+          
+          <p class="fade-in-text animate__animated animate__fadeIn animate__delay-1s" style="font-family: 'Arial', sans-serif; letter-spacing: 1px; margin-bottom: 20px;">
+            Paid for by Friends of the Short King.
+          </p>
+          
+          <div class="fade-in-text animate__animated animate__fadeIn animate__delay-2s" style="font-family: 'VT323', monospace; color: #3498db; font-size: 1.5em;">
+            Vote Malcolm Flack 2025
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/zoom/zoom.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/notes/notes.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/highlight/highlight.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      controls: true,
+      progress: true,
+      center: true,
+      width: '100%',
+      height: '100%',
+      margin: 0,
+      minScale: 0.2,
+      maxScale: 2.0,
+      transition: 'slide',
+      plugins: [ RevealZoom, RevealNotes, RevealHighlight ],
+      slideNumber: true,
+      autoPlayMedia: true,
+      backgroundTransition: 'fade',
+      viewDistance: 3,
+      display: 'flex',
+      navigationMode: 'default',
+      // Press 's' to show speaker notes
+      keyboard: {
+        83: function() {
+          const notes = document.querySelectorAll('.presenter-notes');
+          notes.forEach(note => {
+            note.style.display = note.style.display === 'block' ? 'none' : 'block';
+          });
+        }
+      }
+    });
+  </script>
+</body>
+</html>
